@@ -21,9 +21,3 @@ export const countWeekdays = (start: Date, end: Date): number => {
   const days = eachDayOfInterval({ start, end });
   return days.filter(day => !isWeekend(day)).length;
 }
-
-// [Test Case]:
-const startDate = new Date(2024, 0, 1); // January 1, 2024
-const endDate = new Date(2024, 0, 10); // January 10, 2024
-
-console.log(countWeekdays(startDate, endDate)); // Output should be 8 (excluding weekends)
