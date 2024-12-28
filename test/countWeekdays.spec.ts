@@ -1,4 +1,4 @@
-import { countWeekdays } from './countWeekdays';
+import { countWeekdays } from './../src/countWeekdays';
 
 describe('countWeekdays', () => {
   it('should return the number of weekdays between following dates', () => {
@@ -6,7 +6,6 @@ describe('countWeekdays', () => {
     const endDate = new Date(2024, 0, 10);
 
     const result = countWeekdays(startDate, endDate);
-
     expect(result).toBe(8);
   });
 
@@ -15,7 +14,6 @@ describe('countWeekdays', () => {
     const endDate = new Date(2024, 0, 7);
 
     const result = countWeekdays(startDate, endDate);
-
     expect(result).toBe(0);
   });
 

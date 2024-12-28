@@ -21,10 +21,3 @@ import { formatDistanceToNow, formatDistance } from "date-fns";
 export const getTimeAgo = (date: Date, dateToCompare?: Date): string => {
   return dateToCompare ? formatDistance(date, dateToCompare) : formatDistanceToNow(date);
 }
-
-// [Test Case]:
-const date = new Date(2023, 0, 1); // January 1, 2023
-const dateToCompare = new Date(2023, 0, 10); // January 10, 2023
-
-console.log(getTimeAgo(date)); // Output should be "almost 2 years"
-console.log(getTimeAgo(date, dateToCompare)); // Output should be "9 days"
